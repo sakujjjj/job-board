@@ -1,0 +1,14 @@
+.top{
+    background-color:#223343;
+    font-size: 30px;
+    font-weight: bold;
+    color:aliceblue;
+    text-align: center;
+    padding: 30px;
+}
+
+.general{
+    margin: 30px;
+    
+    line-height: 1.6;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job board 職缺報報</title>
+    <link rel="stylesheet" href="{{ url_for('static',    filename='index.css') }}">
+</head>
+<body>
+    <div class="top">Job board 職缺報報</div>
+    <center class="general">
+    
+    您好 <span id="main"></span>
+
+    <br>
+    <br>
+    
+    <a href="/admin/">
+        <button>刊登職缺</button>
+    </a>
+    <br>
+    <br>
+    <form action="", method="get">
+        <input type="text" name="user">
+        <!-- <input type="button" value="刊登職缺2"> -->
+        <button>刊登職缺2</button>
+    </form>
+
+    <form name='form' >
+        <input type='text' name='name' id='name' /> 
+        <input type='button' value='刊登職缺3' data-action="submit"/>
+    </form>
+    </center>
+</body>
+
+<script>
+    var el = document.getElementById("main");
+    // el.textContent = "Jack"
+
+    const submitBtn = document.querySelector('[data-action="submit"]');
+    submitBtn.addEventListener("click", processFormData);
+    function processFormData(e) {
+        const form = document.forms['form'];
+        console.log(form)
+        const name = form.elements.name.value;
+        el.textContent = name
+    }
+</script>
+</html>
